@@ -1,0 +1,18 @@
+.card_footer {
+  position: relative;
+  cursor: pointer;
+  height: 100px;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: transparent;
+}
+
+.icon {
+  position: absolute;
+  right: 50px;
+  height: 15px;
+  width: 15px;
+}
