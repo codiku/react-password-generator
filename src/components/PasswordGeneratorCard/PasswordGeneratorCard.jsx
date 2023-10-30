@@ -12,6 +12,7 @@ export function PasswordGeneratorCard() {
       numbers: "on",
       uppercase: "on",
       lowercase: "on",
+      specials: "on",
     })
   );
   return (
