@@ -1,3 +1,18 @@
 .root {
   padding: 40px;
+  position: relative;
+  cursor: pointer;
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: transparent;
+}
+
+.icon {
+  position: absolute;
+  right: 50px;
+  height: 15px;
+  width: 15px;
 }
