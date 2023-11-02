@@ -1,15 +1,17 @@
+import { useState } from "react";
 import { PasswordGeneratorBody } from "../PasswordGeneratorBody/PasswordGeneratorBody";
 import { PasswordGeneratorFooter } from "../PasswordGeneratorFooter/PasswordGeneratorFooter";
 import { PasswordGeneratorHeader } from "../PasswordGeneratorHeader/PasswordGeneratorHeader";
 import s from "./style.module.css";
 export function PasswordGeneratorCard() {
+  const [password, setPassword] = useState("Amazing password !");
   return (
     <div className={s.root}>
       <div className={s.main}>
         <PasswordGeneratorHeader />
-        <PasswordGeneratorBody />
+        <PasswordGeneratorBody onSubmit={setPassword} />
       </div>
-      <PasswordGeneratorFooter />
+      <PasswordGeneratorFooter password={password} />
     </div>
   );
 }
