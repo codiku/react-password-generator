@@ -8,7 +8,6 @@ export function PasswordGeneratorBody(props) {
     new FormData(e.currentTarget).forEach((value, key) => {
       formData[key] = value;
     });
-
     props.onSubmit(generatePassword(formData));
   };
 
