@@ -4,7 +4,6 @@ import s from "./style.module.css";
 export function PasswordGeneratorBody(props) {
   const submit = (e) => {
     e.preventDefault();
-
     let formData = {};
     new FormData(e.currentTarget).forEach((value, key) => {
       formData[key] = value;

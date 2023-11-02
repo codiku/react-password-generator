@@ -1,8 +1,8 @@
-export const getRandomChar = (text) => {
+function getRandomChar(text) {
   return text[Math.floor(Math.random() * text.length)];
-};
+}
 
-export const generatePassword = (config) => {
+export function generatePassword(config) {
   let result = "";
   let charToSkip = 1;
   const LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
@@ -10,7 +10,6 @@ export const generatePassword = (config) => {
   const NUMBERS = "01234567890";
   const SPECIALS = "!@#$%^&*()_-+=[]{}|;:'\",.<>?/\\";
   let alphabet = LOWERCASE;
-
   result += getRandomChar(LOWERCASE);
 
   if (config.uppercase) {
@@ -28,9 +27,10 @@ export const generatePassword = (config) => {
     result += getRandomChar(SPECIALS);
     charToSkip++;
   }
+
   for (let i = charToSkip; i < Number(config.size); i++) {
     result += getRandomChar(alphabet);
   }
-
+  console.log("***", result);
   return result;
-};
+}
