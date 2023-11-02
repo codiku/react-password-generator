@@ -1,17 +1,18 @@
 import s from "./style.module.css";
 
-export function PasswordGeneratorBody({ onSubmit }) {
-  const submit = (event) => {
-    event.preventDefault();
-    const formData = {};
-
-    new FormData(event.target).forEach((value, key) => {
+export function PasswordGeneratorBody(props) {
+  const submit = (e) => {
+    e.preventDefault();
+    console.log("***", "submit");
+    let formData = {};
+    new FormData(e.currentTarget).forEach((value, key) => {
       formData[key] = value;
     });
-
     console.log("***", formData);
-    let password = Math.random();
-    onSubmit(password);
+    // generate a random password using formData
+    // Update the parent password state with generated password
+    let generatedPassword = Math.random();
+    props.onSubmit(generatedPassword);
   };
 
   return (
@@ -40,7 +41,9 @@ export function PasswordGeneratorBody({ onSubmit }) {
         </div>
       </div>
       <div className={s.btn_container}>
-        <button className={s.btn_generate}>GENERATE</button>
+        <button type="submit" className={s.btn_generate}>
+          GENERATE
+        </button>
       </div>
     </form>
   );

@@ -4,7 +4,7 @@ import { PasswordGeneratorFooter } from "../PasswordGeneratorFooter/PasswordGene
 import { PasswordGeneratorHeader } from "../PasswordGeneratorHeader/PasswordGeneratorHeader";
 import s from "./style.module.css";
 export function PasswordGeneratorCard() {
-  const [password, setPassword] = useState("Amazing password !");
+  const [password, setPassword] = useState("Amazing Password");
   return (
     <div className={s.root}>
       <div className={s.main}>
